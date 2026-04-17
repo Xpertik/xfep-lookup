@@ -6,11 +6,41 @@ build-backend = "hatchling.build"
 name = "xfep-lookup"
 version = "0.1.0"
 description = "RUC/DNI lookup con proveedores pluggables para Facturación Electrónica Perú"
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+authors = [
+    {name = "Jhonatan Mosquera Tabra", email = "jhonatanmt83@gmail.com"},
+]
+maintainers = [
+    {name = "Jhonatan Mosquera Tabra", email = "jhonatanmt83@gmail.com"},
+]
+keywords = ["sunat", "peru", "ruc", "dni", "lookup", "reniec", "async", "httpx"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Topic :: Office/Business :: Financial :: Accounting",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Framework :: AsyncIO",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.13",
+    "Natural Language :: Spanish",
+    "Operating System :: OS Independent",
+]
 requires-python = ">=3.13"
 dependencies = ["httpx>=0.27"]
 
 [project.optional-dependencies]
 dev = ["pytest>=8.0", "pytest-asyncio>=0.24"]
+
+[project.urls]
+Homepage = "https://github.com/Xpertik/xfep-lookup"
+Repository = "https://github.com/Xpertik/xfep-lookup"
+Issues = "https://github.com/Xpertik/xfep-lookup/issues"
+Documentation = "https://github.com/Xpertik/xfep-lookup#readme"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/xfep"]
